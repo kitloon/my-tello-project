@@ -20,7 +20,7 @@ Ensure you have Python 3.8+ installed. The main libraries used are:
 **Clone the repository:**
 ```
 git clone ...
-cd your-repo-name
+cd my-tello-project
 ```
 
 1. **Create a virtual environment (Recommended):**
