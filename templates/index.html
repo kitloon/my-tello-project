@@ -1,0 +1,59 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Face Tracking Console</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Drone Face Tracking Console</h1>
+            <div id="status-bar">
+                <div class="status-item">
+                    <span>Status:</span>
+                    <span id="flight-status-text" class="status-disconnected">DISCONNECTED</span>
+                </div>
+                <div class="status-item">
+                    <span>Battery:</span>
+                    <div id="battery-level-container">
+                        <div id="battery-level-bar"></div>
+                    </div>
+                    <span id="battery-level-text">N/A</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="video-container">
+                <!-- 用户实际看到的画布 -->
+                <canvas id="video-canvas"></canvas>
+                <!-- 隐藏的img标签，仅用于从后端接收数据流 -->
+                <img id="video-feed-source" src="{{ url_for('video_feed') }}" alt="Video Stream Source" style="display: none;">
+            </div>
+            <div class="controls-container">
+                <div class="control-group">
+                    <h2>Connection & Flight</h2>
+                    <button id="btn-connect" class="btn btn-primary">Connect</button>
+                    <button id="btn-takeoff" class="btn btn-action" disabled>Takeoff</button>
+                    <button id="btn-land" class="btn btn-danger" disabled>Land</button>
+                </div>
+                <div class="control-group">
+                    <h2>Face Tracking</h2>
+                    <button id="btn-start-tracking" class="btn btn-success" disabled>Start Tracking</button>
+                    <button id="btn-stop-tracking" class="btn btn-warning" disabled>Stop Tracking</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Project by Your Name | 2024</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
