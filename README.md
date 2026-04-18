@@ -73,6 +73,3 @@ app.py: Flask web server and API endpoints.
 * templates/index.html: The frontend layout for the Flask application.
 * haarcascade_frontalface_default.xml: Pre-trained face detection model.
 
-## 🙏 Credits & Acknowledgments
-The DroneController.py is inspired by and modified from Damia Fuentes' Repo.
-Built with the awesome OpenCV and Mediapipe libraries.
