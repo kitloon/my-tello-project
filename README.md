@@ -19,7 +19,7 @@ Ensure you have Python 3.8+ installed. The main libraries used are:
 
 **Clone the repository:**
 ```
-git clone ...
+git clone https://github.com/kitloon/my-tello-project.git
 cd my-tello-project
 ```
 
